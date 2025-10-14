@@ -1,0 +1,21 @@
+{
+  "name": "cocktail-shopper",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@pionjs/pion": "^2.8.3",
+    "lit-html": "^3.3.1"
+  },
+  "devDependencies": {
+    "vite": "^7.1.10"
+  }
+}
