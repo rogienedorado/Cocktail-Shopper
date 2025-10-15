@@ -1,0 +1,45 @@
+.toaster {
+  position: fixed;
+  bottom: 40px; /* safer for responsiveness */
+  right: 40px;
+
+  background-color: #0E98D4;
+  color: #fff;
+  font-weight: 600;
+  padding: 16px 24px;
+  border-radius: 6px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+
+  z-index: 1000; /* stays above other elements */
+}
+
+.toaster.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 768px) {
+  .toaster {
+    bottom: 30px;
+    right: 20px;
+    font-size: 0.9rem;
+    padding: 14px 20px;
+  }
+}
+
+/* Small screens (phones) */
+@media (max-width: 480px) {
+  .toaster {
+    bottom: 20px;
+    right: 10px;
+    left: 10px;
+    text-align: center;
+    font-size: 0.85rem;
+    padding: 12px 16px;
+  }
+}

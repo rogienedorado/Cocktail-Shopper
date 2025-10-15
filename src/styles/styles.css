@@ -20,6 +20,9 @@ body {
 .search-bar {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .search-input {
@@ -28,6 +31,7 @@ body {
   border: 1px solid #ccc;
   border-radius: 6px 0 0 6px;
   font-size: 1rem;
+  min-width: 200px;
 }
 
 .search-button {
@@ -41,14 +45,18 @@ body {
 
 .shopping-list {
   position: absolute;
-  top: 120px;           
-  right: -100px;          
-  width: 250px;         
+  top: 120px;
+  right: -100px;
+  width: 250px;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 8px;
   background-color: #fff;
   text-align: left;
+  height: auto;
+  max-height: 500px;
+  overflow-y: auto;
+  transition: all 0.3s ease;
 }
 
 .shopping-list h2 {
@@ -57,22 +65,161 @@ body {
 
 .shopping-list ul {
   list-style-type: none;
+  padding: 0;
+  margin: 0 0 60px 0;
 }
 
 .shopping-list li {
   padding-bottom: 10px;
-  padding-left: 0px;
-  
+}
+
+.remove-button {
+  margin-left: 10px;
+  background-color: white;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  padding: 2px 6px;
+  cursor: pointer;
+  font-weight: bold;
 }
 
 .print-button-container {
-  margin-top: 15px;
-  cursor: pointer;
-  font-weight: bold;
-  background-color: #0E98D4;
-  color: white;
+  position: sticky;
+  bottom: 10px;
+  background-color: #fff;
+  padding-top: 10px;
+  text-align: left;
+}
+
+.print-button {
+  background: #0e98d4;
+  border: none;
+  color: #fff;
+  padding: 12px 20px;
   border-radius: 6px;
-  display: inline-block;
-  padding: 2px 8px;     
-  text-align: center; 
+  cursor: pointer;
+}
+
+.pagination-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+  margin-right: 350px;
+  min-height: 44px;
+}
+
+.prev-button,
+.next-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  background-color: #0e98d4;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.prev-button:hover,
+.next-button:hover {
+  background-color: #0c82b6;
+}
+
+/* -------------------------- */
+/* Responsive adjustments     */
+/* -------------------------- */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .app-container {
+    margin: 60px auto;
+    max-width: 90%;
+  }
+
+  .shopping-list {
+    position: relative;
+    width: 100%;
+    max-height: 300px;
+    margin-top: 20px;
+    right: auto;
+  }
+
+  .print-button-container {
+    text-align: center;
+  }
+
+  .pagination-buttons {
+    margin-right: 0;
+  }
+}
+
+/* Medium devices (tablets and small laptops) */
+@media (max-width: 768px) {
+  .app-container {
+    margin: 60px auto;
+    max-width: 90%;
+  }
+
+  .shopping-list {
+    position: relative;
+    width: 100%;
+    max-height: 300px;
+    margin-top: 20px;
+    right: auto;
+  }
+
+  .print-button-container {
+    text-align: center;
+  }
+
+  .pagination-buttons {
+    margin-right: 0;
+  }
+}
+
+/* Small devices (phones) */
+@media (max-width: 480px) {
+  .app-container {
+    margin: 40px auto;
+    padding: 0 10px;
+  }
+
+  .app-title {
+    font-size: 1.6rem;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .search-input {
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  .search-button {
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  .shopping-list {
+    width: 100%;
+    max-height: 280px;
+    top: auto;
+    position: relative;
+  }
+
+  .pagination-buttons {
+    flex-direction: column;
+    gap: 8px;
+    margin-right: 0;
+  }
+
+  .prev-button,
+  .next-button {
+    width: 100%;
+  }
 }
