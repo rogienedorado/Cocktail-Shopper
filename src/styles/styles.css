@@ -127,11 +127,6 @@ body {
   background-color: #0c82b6;
 }
 
-/* -------------------------- */
-/* Responsive adjustments     */
-/* -------------------------- */
-
-/* Tablets */
 @media (max-width: 1024px) {
   .app-container {
     margin: 60px auto;
@@ -155,7 +150,7 @@ body {
   }
 }
 
-/* Medium devices (tablets and small laptops) */
+
 @media (max-width: 768px) {
   .app-container {
     margin: 60px auto;
@@ -179,7 +174,7 @@ body {
   }
 }
 
-/* Small devices (phones) */
+
 @media (max-width: 480px) {
   .app-container {
     margin: 40px auto;

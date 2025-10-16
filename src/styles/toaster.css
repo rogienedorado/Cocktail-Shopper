@@ -1,6 +1,6 @@
 .toaster {
   position: fixed;
-  bottom: 40px; /* safer for responsiveness */
+  bottom: 40px; 
   right: 40px;
 
   background-color: #0E98D4;
@@ -14,7 +14,7 @@
   transition: opacity 0.3s ease, visibility 0.3s ease;
   pointer-events: none;
 
-  z-index: 1000; /* stays above other elements */
+  z-index: 1000; 
 }
 
 .toaster.show {
@@ -22,7 +22,7 @@
   visibility: visible;
 }
 
-/* Medium screens (tablets) */
+
 @media (max-width: 768px) {
   .toaster {
     bottom: 30px;
@@ -32,7 +32,7 @@
   }
 }
 
-/* Small screens (phones) */
+
 @media (max-width: 480px) {
   .toaster {
     bottom: 20px;

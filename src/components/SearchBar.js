@@ -1,5 +1,5 @@
 import { html } from "lit-html";
-import { showToast, hideToast } from "./Toaster.js";
+import { showToast, hideToast } from "/src/components/Toaster.js";
 import "../styles/styles.css";
 
 export const SearchBar = (searchFn) => {
